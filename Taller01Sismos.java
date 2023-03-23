@@ -2,9 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        double a[][] = new double[24][7];
-        a = IngresarDatos();
-        SismosSmsMayorOIguala7(a);
+        menu();
     }
 
     public static double[][] IngresarDatos() {
@@ -69,9 +67,12 @@ public class Main {
 
     public static void menu() {
         Scanner teclado = new Scanner(System.in);
+        int eleccion = 1;
+
         double Sismos[][] = new double[24][7];
-        int eleccion = 0;
+
         while ((0 < eleccion) && (eleccion < 5)) {
+            System.out.println();
             System.out.println("Eliga la opcion que quiere hacer:");
             System.out.println("[1]Ingresar datos");
             System.out.println("[2]Mostrar sismo de mayor magnitud");
@@ -96,8 +97,6 @@ public class Main {
                     System.out.println("Salio del programa exitosamente");
                     break;
             }
-
-
         }
     }
 }
